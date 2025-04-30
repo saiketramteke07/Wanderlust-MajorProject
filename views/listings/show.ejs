@@ -10,7 +10,7 @@
     </div>
     <div class="card col-6 offset-3 show-card listing-card ">
 
-        <img src="<%=listing.image.url %>" class="card-img-top show-img" alt="listing image">
+        <img src="<%=listing.image.url %>" class="card-img-top show-img col-sm-8" alt="listing image">
   <div class="card-body">
     <p class="card-text">Owned by <i><%=listing.owner.username %></i><br></p>
         
@@ -23,6 +23,7 @@
   </div>
  </div>
 </div>
+
 <% if(currUser&&currUser._id.equals(listing.owner._id)){ %>
     <div class="btns">
         <a href="/listings/<%=listing._id%>/edit" class="btn btn-dark col-1 offset-3 edit-btn">Edit</a>
@@ -90,8 +91,13 @@
 </div>
 <% } %>
 </div>
-<div class="col-8 offset-3 mb-3">
-    <h3>Where you'll be</h3>
-    <div id="map"></div>
-</div>
+<div class="container">
+    <div class="row mb-3">
+      <div class="col-12 col-md-8 offset-md-2">
+        <h3>Where you'll be</h3>
+        <div id="map" class="w-100" style="height: 300px;"></div>
+      </div>
+    </div>
+  </div>
+  
 <script src="/js/map.js"> </script>

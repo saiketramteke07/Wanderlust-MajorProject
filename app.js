@@ -88,6 +88,7 @@ app.use((req,res,next)=>{
     res.locals.currUser=req.user;
     next();
 })
+
 //DEMO USER
 // app.get("/demouser",async(req,res)=>{
 //     let fakeUser=new User({
@@ -102,20 +103,19 @@ app.use((req,res,next)=>{
 
 
 
-
-
-//ROUTES 
-app.use("/listings",listingsRouter); 
-app.use("/listings/:id/reviews",reviewsRouter)
-app.use("/",userRouter);
-
 //SEARCH LISTING
 app.get('/search', async (req, res) => {
     let {q}=req.query
     const result=await Listing.find({title:q})
     res.render("listings/searchResults",{result,q});
   });
-  
+
+//ROUTES 
+app.use("/listings",listingsRouter); 
+app.use("/listings/:id/reviews",reviewsRouter)
+app.use("/",userRouter);
+
+
 
 app.all("*",(req,res,next)=>{
     next(new ExpressError(404,"Page not found!"));

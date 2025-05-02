@@ -16,7 +16,7 @@ body{
 
 .fa-compass{
    color:#fe424d;
-   font-size: 2rem;
+   font-size:2rem;
 }
 
 .nav-link{
@@ -116,8 +116,7 @@ body{
 
 /*MAP*/
 #map { 
-  height: 400px;
-  width: 80vh;
+  height: 40vh;
 }
   
 #search{

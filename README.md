@@ -7,7 +7,7 @@
 
 - 👯 I’m on my journey of **exploring new stuff in Developement**
 
-- Check out the working version here: [Wanderlust](https://wanderlust-escapes.onrender.com/listings)
+- (https://your-live-demo-link.com) Check out the working version here: [Wanderlust](https://wanderlust-escapes.onrender.com/listings)
 
 - 📫 How to reach me **ramtekesaiket@gmail.com**
 
